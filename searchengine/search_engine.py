@@ -9,11 +9,13 @@ import numpy as np
 
 
 def get_corpus():
-    sentence1 = "THIS is a random sentence. Barack Obama was the best president ever. OBAMA OBAMA OBAMA"
-    sentence2 = "this is a serious sentence."
+    # sentence1 = "THIS is a random sentence. Barack Obama was the best president ever. OBAMA OBAMA OBAMA"
+    # sentence2 = "this is a serious sentence."
+    doc1 = open("Doc1.txt").read()
+    doc2 = open("Doc2.txt").read()
     sentence_list = []
-    sentence_list.append(sentence1)
-    sentence_list.append(sentence2)
+    sentence_list.append(doc1)
+    sentence_list.append(doc2)
     return sentence_list
 
 
@@ -44,7 +46,7 @@ def clean_corpus(corpus):
     for doc in corpus:
         doc = doc.lower()
         doc = remove_punctuation(doc)
-        doc = remove_stop_words(doc)
+        # doc = remove_stop_words(doc)
         cleaned_corpus.append(doc)
 
     return cleaned_corpus
@@ -86,39 +88,69 @@ def get_terms_frequencies(doc):
     return frequencies
 
 
-def process_corpus():
-    frequencies = {}
-    words_vector = []
+def get_corpus_tf_and_idf(corpus):
+    words = []
 
-    corpus = get_corpus()
     corpus = clean_corpus(corpus)
 
     # we get full frequencies and the original word vector in the correct order
     for doc in corpus:
-        frequencies = add_words_to_frequencies(frequencies, doc)
-        words_vector = add_words_to_vector(words_vector, doc)
+        words = add_words_to_vector(words, doc)
 
-    print(words_vector)
-    # print(frequencies)
+    tf_vectors = []
+    idf_vector = [0] * words.__len__()
 
-    vectors = []
     for doc in corpus:
         current_vector = []
         doc_terms_frequencies = get_terms_frequencies(doc)
-        print(doc_terms_frequencies)
-        for word in words_vector:
+        for word in words:
             frequency = doc_terms_frequencies.get(word)
             frequency = 0 if frequency is None else frequency
             current_vector.append(frequency)
-        vectors.append(current_vector)
+            if doc.__contains__(word):
+                word_index = words.index(word)
+                idf_vector[word_index] += 1
 
-    return vectors
+        tf_vectors.append(current_vector)
+
+    idf_vector = np.array(idf_vector)
+    idf_vector = idf_vector / corpus.__len__()
+    idf_vector = np.log10(idf_vector)
+
+    return [tf_vectors, idf_vector.tolist(), words]
+
+
+def get_query_tf(query, words):
+    query = query.lower()
+    query = remove_punctuation(query)
+    #query = remove_stop_words(query)
+
+    words_query_tf = [0] * words.__len__()
+    full_query_tf = get_terms_frequencies(query)
+
+    for i in range(words.__len__()):
+        word = words[i]
+        frequency = full_query_tf.get(word)
+        frequency = 0 if frequency is None else frequency
+        words_query_tf[i] = frequency
+
+    return words_query_tf
 
 
 if __name__ == "__main__":
-    # query = input('Please insert your query:')
-    # print(query)
+    doc_corpus = get_corpus()
+    [tf, idf, words_vector] = get_corpus_tf_and_idf(doc_corpus)
 
-    vectors = process_corpus()
-    # TODO : CALCULATE IDF
-    print(vectors)
+    tf_idf = []
+    for tf_doc in tf:
+        tf_idf.append((np.array(tf_doc) * np.array(idf)).tolist())
+    print('tf-idf:')
+    print(tf_idf)
+    print('tf:')
+    print(tf)
+
+    # query = 'is there a truck in the highway?'  # input('Please insert your query:')
+    query = 'car driven on road'
+    query_tf = get_query_tf(query, words_vector)
+    #print(query_tf)
+    # print(np.array(query_tf) * np.array(idf))
