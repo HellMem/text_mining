@@ -1,6 +1,3 @@
-import matplotlib.pyplot as plt
-import matplotlib
-from wordcloud import WordCloud
 from nltk.corpus import stopwords
 from nltk import word_tokenize
 import re
@@ -9,8 +6,6 @@ import numpy as np
 
 
 def get_corpus():
-    # sentence1 = "THIS is a random sentence. Barack Obama was the best president ever. OBAMA OBAMA OBAMA"
-    # sentence2 = "this is a serious sentence."
     doc1 = open("Doc1.txt").read()
     doc2 = open("Doc2.txt").read()
     sentence_list = []
@@ -50,17 +45,6 @@ def clean_corpus(corpus):
         cleaned_corpus.append(doc)
 
     return cleaned_corpus
-
-
-def add_words_to_frequencies(frequencies, doc):
-    tokenized_doc = word_tokenize(doc)
-    for word in tokenized_doc:
-        if word in frequencies:
-            frequencies[word] += 1
-        else:
-            frequencies[word] = 1
-
-    return frequencies
 
 
 def add_words_to_vector(words_vector, doc):
@@ -115,26 +99,54 @@ def get_corpus_tf_and_idf(corpus):
 
     idf_vector = np.array(idf_vector)
     idf_vector = idf_vector / corpus.__len__()
-    idf_vector = np.log10(idf_vector)
+    idf_vector = np.log10(idf_vector) * -1
 
     return [tf_vectors, idf_vector.tolist(), words]
 
 
-def get_query_tf(query, words):
-    query = query.lower()
-    query = remove_punctuation(query)
-    #query = remove_stop_words(query)
-
+def get_query_tf_tfidf(query, words, tf, tf_idf):
+    words_query_tfidf = [0] * words.__len__()
     words_query_tf = [0] * words.__len__()
-    full_query_tf = get_terms_frequencies(query)
 
     for i in range(words.__len__()):
         word = words[i]
-        frequency = full_query_tf.get(word)
-        frequency = 0 if frequency is None else frequency
-        words_query_tf[i] = frequency
+        if query.__contains__(word):
+            for current_tf_idf, current_tf in zip(tf_idf, tf):
+                if current_tf_idf[i] > words_query_tfidf[i]:
+                    words_query_tfidf[i] = current_tf_idf[i]
+                if current_tf[i] > words_query_tf[i]:
+                    words_query_tf[i] = current_tf[i]
 
-    return words_query_tf
+    return [words_query_tfidf, words_query_tf]
+
+
+def get_euclidean_similarity(docs_idf, query_idf):
+    vq = np.array(query_idf)
+    euclidean_similarities = []
+
+    for i in range(docs_idf.__len__()):
+        vi = np.array(docs_idf[i])
+        d_q_vi = np.linalg.norm(vi - vq)
+        euclidean_similarities.append(d_q_vi)
+
+    return euclidean_similarities
+
+
+def get_cosine_similarity(docs_idf, query_idf):
+    v_q = np.array(query_idf)
+    n_v_q = np.linalg.norm(v_q)
+    cosine_similarities = []
+
+    for i in range(docs_idf.__len__()):
+        v_i = np.array(docs_idf[i])
+        n_v_i = np.linalg.norm(v_i)
+
+        dot_q_vi = np.dot(v_q, v_i)
+
+        d_q_vi = dot_q_vi / (n_v_q * n_v_i)
+        cosine_similarities.append(d_q_vi)
+
+    return cosine_similarities
 
 
 if __name__ == "__main__":
@@ -144,13 +156,46 @@ if __name__ == "__main__":
     tf_idf = []
     for tf_doc in tf:
         tf_idf.append((np.array(tf_doc) * np.array(idf)).tolist())
+
     print('tf-idf:')
     print(tf_idf)
     print('tf:')
     print(tf)
 
-    # query = 'is there a truck in the highway?'  # input('Please insert your query:')
-    query = 'car driven on road'
-    query_tf = get_query_tf(query, words_vector)
-    #print(query_tf)
-    # print(np.array(query_tf) * np.array(idf))
+    print('\n\nquery 1: ')
+    query1 = 'is there a truck in the highway?'
+    print(query1)
+    [words_query_tfidf_1, words_query_tf_1] = get_query_tf_tfidf(query1, words_vector, tf, tf_idf)
+    print('tf-idf')
+    print(words_query_tfidf_1)
+    print('tf')
+    print(words_query_tf_1)
+
+    print('Similarity by Euclidean (min): ')
+    euclidean_similarities_query1 = get_euclidean_similarity(tf_idf, words_query_tfidf_1)
+    print(euclidean_similarities_query1)
+    print('Top 1 most relevant with Euclidean Doc', np.argmin(euclidean_similarities_query1) + 1)
+
+    print('Similarity by Cosine (max): ')
+    cosine_similarities_query1 = get_cosine_similarity(tf_idf, words_query_tfidf_1)
+    print(cosine_similarities_query1)
+    print('Top 1 most relevant with Cosine Doc', np.argmax(cosine_similarities_query1) + 1)
+
+    print('\n\nquery 2: ')
+    query2 = 'car driven on road'
+    print(query2)
+    [words_query_tfidf_2, words_query_tf_2] = get_query_tf_tfidf(query2, words_vector, tf, tf_idf)
+    print('tf-idf')
+    print(words_query_tfidf_2)
+    print('tf')
+    print(words_query_tf_2)
+
+    print('Similarity by Euclidean (min): ')
+    euclidean_similarities_query2 = get_euclidean_similarity(tf_idf, words_query_tfidf_2)
+    print(euclidean_similarities_query2)
+    print('Top 1 most relevant with Euclidean Doc', np.argmin(euclidean_similarities_query2) + 1)
+
+    print('Similarity by Cosine (max): ')
+    cosine_similarities_query2 = get_cosine_similarity(tf_idf, words_query_tfidf_2)
+    print(cosine_similarities_query2)
+    print('Top 1 most relevant with Cosine Doc', np.argmax(cosine_similarities_query2) + 1)
