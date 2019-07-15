@@ -3,14 +3,14 @@ from nltk import word_tokenize
 import re
 import string
 import numpy as np
+import os
 
 
-def get_corpus():
-    doc1 = open("Doc1.txt").read()
-    doc2 = open("Doc2.txt").read()
+def get_corpus(path):
     sentence_list = []
-    sentence_list.append(doc1)
-    sentence_list.append(doc2)
+    for r, d, f in os.walk(path):
+        for file in f:
+            sentence_list.append(open(path + file).read())
     return sentence_list
 
 
@@ -149,8 +149,30 @@ def get_cosine_similarity(docs_idf, query_idf):
     return cosine_similarities
 
 
+def process_query(query, words_vector, tf, tf_idf):
+    print('\n\nquery: ')
+    print(query)
+    [words_query_tfidf, words_query_tf] = get_query_tf_tfidf(query, words_vector, tf, tf_idf)
+    print('tf-idf')
+    print(words_query_tfidf)
+    print('tf')
+    print(words_query_tf)
+
+    print('Similarity by Euclidean (min): ')
+    euclidean_similarities_query = get_euclidean_similarity(tf_idf, words_query_tfidf)
+    print(euclidean_similarities_query)
+    print('Top 1 most relevant with Euclidean Doc', np.argmin(euclidean_similarities_query) + 1)
+
+    print('Similarity by Cosine (max): ')
+    cosine_similarities_query = get_cosine_similarity(tf_idf, words_query_tfidf)
+    print(cosine_similarities_query)
+    print('Top 1 most relevant with Cosine Doc', np.argmax(cosine_similarities_query) + 1)
+
+
 if __name__ == "__main__":
-    doc_corpus = get_corpus()
+    # path = "files/" example path
+    path = input("Input corpus directory: ")
+    doc_corpus = get_corpus(path)
     [tf, idf, words_vector] = get_corpus_tf_and_idf(doc_corpus)
 
     tf_idf = []
@@ -162,40 +184,12 @@ if __name__ == "__main__":
     print('tf:')
     print(tf)
 
-    print('\n\nquery 1: ')
-    query1 = 'is there a truck in the highway?'
-    print(query1)
-    [words_query_tfidf_1, words_query_tf_1] = get_query_tf_tfidf(query1, words_vector, tf, tf_idf)
-    print('tf-idf')
-    print(words_query_tfidf_1)
-    print('tf')
-    print(words_query_tf_1)
+    # query1 = 'is there a truck in the highway?'
+    # process_query(query1, words_vector, tf, tf_idf)
 
-    print('Similarity by Euclidean (min): ')
-    euclidean_similarities_query1 = get_euclidean_similarity(tf_idf, words_query_tfidf_1)
-    print(euclidean_similarities_query1)
-    print('Top 1 most relevant with Euclidean Doc', np.argmin(euclidean_similarities_query1) + 1)
+    # query2 = 'car driven on road'
+    # process_query(query2, words_vector, tf, tf_idf)
 
-    print('Similarity by Cosine (max): ')
-    cosine_similarities_query1 = get_cosine_similarity(tf_idf, words_query_tfidf_1)
-    print(cosine_similarities_query1)
-    print('Top 1 most relevant with Cosine Doc', np.argmax(cosine_similarities_query1) + 1)
-
-    print('\n\nquery 2: ')
-    query2 = 'car driven on road'
-    print(query2)
-    [words_query_tfidf_2, words_query_tf_2] = get_query_tf_tfidf(query2, words_vector, tf, tf_idf)
-    print('tf-idf')
-    print(words_query_tfidf_2)
-    print('tf')
-    print(words_query_tf_2)
-
-    print('Similarity by Euclidean (min): ')
-    euclidean_similarities_query2 = get_euclidean_similarity(tf_idf, words_query_tfidf_2)
-    print(euclidean_similarities_query2)
-    print('Top 1 most relevant with Euclidean Doc', np.argmin(euclidean_similarities_query2) + 1)
-
-    print('Similarity by Cosine (max): ')
-    cosine_similarities_query2 = get_cosine_similarity(tf_idf, words_query_tfidf_2)
-    print(cosine_similarities_query2)
-    print('Top 1 most relevant with Cosine Doc', np.argmax(cosine_similarities_query2) + 1)
+    while True:
+        query = input("\n\nInput your search: ")
+        process_query(query, words_vector, tf, tf_idf)
