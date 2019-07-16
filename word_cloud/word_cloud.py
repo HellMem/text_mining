@@ -24,12 +24,22 @@ if __name__ == "__main__":
         new_sent = []
         for token in sent:
             new_token = re.sub(x, '', token)
-            if not new_token == '':
-                if new_token not in stop_words:
-                    new_sent.append(new_token.lower())
+            new_token = new_token.replace(',', '')
+            new_token = new_token.replace('.', '')
+            new_token = new_token.replace(';', '')
+            new_token = new_token.replace('¿', '')
+            new_sent.append(new_token)
         tokenized_doc_no_punctuation.append(new_sent)
 
-    doc = tokenized_doc_no_punctuation
+    tokenized_doc_no_stop_words = []
+    for sent in tokenized_doc_no_punctuation:
+        new_sent = []
+        for token in sent:
+            if token.lower() not in stop_words:
+                new_sent.append(token)
+        tokenized_doc_no_stop_words.append(new_sent)
+
+    doc = tokenized_doc_no_stop_words
 
     words_frequencies = {}
     for sent in doc:
