@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3c8688e-2bfe-4b97-9931-f5e4e3175b00" name="Default Changelist" comment="Finished intention classifier">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlu/relevant_topics/Relevant Topics.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/nlu/relevant_topics/Relevant Topics.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/searchengine/Doc1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/searchengine/Doc2.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="e3c8688e-2bfe-4b97-9931-f5e4e3175b00" name="Default Changelist" comment="Removed unused files" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,10 +10,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/word_cloud/word_cloud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="340">
               <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -30,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/word_cloud/example.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="153">
               <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -39,11 +34,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nlu/intent_classifier/Classifier-intention.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="9" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searchengine/search_engine.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3128">
+              <caret line="184" column="13" lean-forward="true" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,7 +95,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,12 +116,19 @@
             <path>
               <item name="text_mining" type="b2602c69:ProjectViewProjectNode" />
               <item name="text_mining" type="462c0819:PsiDirectoryNode" />
-              <item name="word_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="nlu" type="462c0819:PsiDirectoryNode" />
+              <item name="relevant_topics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="text_mining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="text_mining" type="462c0819:PsiDirectoryNode" />
+              <item name="searchengine" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -347,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563235253365</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Removed unused files">
+      <created>1586899648283</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1586899648283</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -361,9 +372,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1227608" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1227608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -373,8 +383,8 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32827735" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -411,7 +421,8 @@
     <MESSAGE value="Added relevant topics" />
     <MESSAGE value="Corrected word cloud" />
     <MESSAGE value="Finished intention classifier" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished intention classifier" />
+    <MESSAGE value="Removed unused files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unused files" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -438,9 +449,6 @@
           <caret line="18" column="92" selection-start-line="18" selection-start-column="92" selection-end-line="18" selection-end-column="92" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clase2/Example1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../text_mining_venv/Lib/site-packages/matplotlib/cbook/deprecation.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -470,21 +478,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clase1/clase1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clase2/tokenize2.py" />
     <entry file="file://$PROJECT_DIR$/clase2/word_cloud.py" />
-    <entry file="file://$PROJECT_DIR$/clase2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/clase3/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -492,6 +487,51 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/clase2/wordcloud.py" />
+    <entry file="file://$PROJECT_DIR$/clase3/search_engine.py" />
+    <entry file="file://$PROJECT_DIR$/nlu/intent_classifier/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/nlu/intent_classifier/Basic-Classifier-intention.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/session2/Untitled.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/session2/Glove-pretain.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/session2/word2vec example.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/session2/word2vec-pretrain.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/session2/DistributedRepresentationsv2.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/session2/DistributedRepresentationsv1_tf.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/intent_classifier/Classifier-intention.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clase2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clase1/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clase1/clase1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clase2/Example1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clase2/tokenize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clase2/example.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -502,60 +542,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clase2/tokenize.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/word_cloud/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/clase3/search_engine.py" />
     <entry file="file://$PROJECT_DIR$/searchengine/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/searchengine/search_engine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="3128">
           <caret line="184" column="13" lean-forward="true" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="13" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
-            <element signature="e#343#726#0" />
-            <element signature="e#761#982#0" />
-            <element signature="e#1015#1223#0" />
-            <element signature="e#1274#1439#0" />
-            <element signature="e#1478#1826#0" />
-            <element signature="e#1868#2781#0" />
-            <element signature="e#2838#3362#0" />
-            <element signature="e#3420#3674#0" />
-            <element signature="e#3729#4085#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlu/intent_classifier/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/nlu/intent_classifier/Basic-Classifier-intention.ipynb" />
-    <entry file="file://$PROJECT_DIR$/nlu/session2/Untitled.ipynb" />
-    <entry file="file://$PROJECT_DIR$/nlu/session2/Glove-pretain.ipynb" />
-    <entry file="file://$PROJECT_DIR$/nlu/session2/word2vec example.ipynb" />
-    <entry file="file://$PROJECT_DIR$/nlu/session2/word2vec-pretrain.ipynb" />
-    <entry file="file://$PROJECT_DIR$/nlu/session2/DistributedRepresentationsv2.ipynb" />
-    <entry file="file://$PROJECT_DIR$/nlu/session2/DistributedRepresentationsv1_tf.ipynb" />
-    <entry file="file://$PROJECT_DIR$/word_cloud/word_cloud.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/word_cloud/example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="153">
           <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -563,10 +568,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlu/intent_classifier/Classifier-intention.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="9" />
+    <entry file="file://$PROJECT_DIR$/word_cloud/word_cloud.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
