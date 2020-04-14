@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3c8688e-2bfe-4b97-9931-f5e4e3175b00" name="Default Changelist" comment="Added search engine first part">
-      <change afterPath="$PROJECT_DIR$/clase1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clase2/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/searchengine/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/searchengine/search_engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/word_cloud/Example1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/word_cloud/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/word_cloud/example.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/word_cloud/word_cloud.py" afterDir="false" />
+    <list default="true" id="e3c8688e-2bfe-4b97-9931-f5e4e3175b00" name="Default Changelist" comment="Finished intention classifier">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/clase1/Example1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clase1.py" beforeDir="false" afterPath="$PROJECT_DIR$/clase1/clase1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clase2/tokenize2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clase3/search_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlu/relevant_topics/Relevant Topics.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/nlu/relevant_topics/Relevant Topics.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchengine/Doc1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchengine/Doc2.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,20 +15,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/searchengine/search_engine.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/word_cloud/word_cloud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+            <state relative-caret-position="238">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <element signature="e#516#899#0" />
-                <element signature="e#934#1155#0" />
-                <element signature="e#1188#1394#0" />
-                <element signature="e#1449#1653#0" />
-                <element signature="e#1704#1869#0" />
-                <element signature="e#1908#2256#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/word_cloud/example.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nlu/intent_classifier/Classifier-intention.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="9" />
             </state>
           </provider>
         </entry>
@@ -50,6 +56,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>car driven on road</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,9 +79,10 @@
         <option value="$PROJECT_DIR$/clase2/wordcloud.py" />
         <option value="$PROJECT_DIR$/word_cloud/wordcloud.py" />
         <option value="$PROJECT_DIR$/word_cloud/example.py" />
-        <option value="$PROJECT_DIR$/word_cloud/word_cloud.py" />
         <option value="$PROJECT_DIR$/clase3/search_engine.py" />
         <option value="$PROJECT_DIR$/searchengine/search_engine.py" />
+        <option value="$PROJECT_DIR$/nlu/intent_classifier/Classifier-intention.ipynb" />
+        <option value="$PROJECT_DIR$/word_cloud/word_cloud.py" />
       </list>
     </option>
   </component>
@@ -96,7 +108,18 @@
             <path>
               <item name="text_mining" type="b2602c69:ProjectViewProjectNode" />
               <item name="text_mining" type="462c0819:PsiDirectoryNode" />
-              <item name="searchengine" type="462c0819:PsiDirectoryNode" />
+              <item name="nlu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="text_mining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="text_mining" type="462c0819:PsiDirectoryNode" />
+              <item name="nlu" type="462c0819:PsiDirectoryNode" />
+              <item name="intent_classifier" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="text_mining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="text_mining" type="462c0819:PsiDirectoryNode" />
+              <item name="word_cloud" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -110,10 +133,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\memo_\Documents\Proyectos\Python\text_mining\text_mining\nlu\session2" />
       <recent name="C:\Users\memo_\Documents\Proyectos\Python\text_mining\text_mining\word_cloud" />
       <recent name="C:\Users\memo_\Documents\repos\python\nlp\clase2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\memo_\Documents\Proyectos\Python\text_mining\text_mining\nlu\relevant_topics" />
+      <recent name="C:\Users\memo_\Documents\Proyectos\Python\text_mining\text_mining\nlu\intent_classifier\data\intention_data" />
+      <recent name="C:\Users\memo_\Documents\Proyectos\Python\text_mining\text_mining\nlu\intent_classifier" />
+      <recent name="C:\Users\memo_\Documents\Proyectos\Python\text_mining\text_mining\searchengine\files" />
       <recent name="C:\Users\memo_\Documents\Proyectos\Python\text_mining\text_mining\clase1" />
     </key>
   </component>
@@ -129,7 +157,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.search_engine">
+  <component name="RunManager" selected="Python.example (1)">
     <configuration name="example (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="nlp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -237,9 +265,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.search_engine" />
-        <item itemvalue="Python.word_cloud (1)" />
         <item itemvalue="Python.example (1)" />
+        <item itemvalue="Python.word_cloud (1)" />
+        <item itemvalue="Python.search_engine" />
         <item itemvalue="Python.example" />
         <item itemvalue="Python.wordcloud (1)" />
       </list>
@@ -270,7 +298,56 @@
       <option name="project" value="LOCAL" />
       <updated>1560744069511</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added search engine">
+      <created>1561319655788</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1561319655788</updated>
+    </task>
+    <task id="LOCAL-00004" summary="finished search engine">
+      <created>1561337374667</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1561337374667</updated>
+    </task>
+    <task id="LOCAL-00005" summary="modified search engine">
+      <created>1563166052682</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1563166052682</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added intention classifier">
+      <created>1563166087493</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1563166087493</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added relevant topics">
+      <created>1563166105721</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1563166105721</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Corrected word cloud">
+      <created>1563235235399</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1563235235399</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Finished intention classifier">
+      <created>1563235253365</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1563235253365</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -286,18 +363,18 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1227608" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1227608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32827735" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2654388" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32827735" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -327,18 +404,32 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create first tokenizer (might fail)" />
     <MESSAGE value="Added search engine first part" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added search engine first part" />
+    <MESSAGE value="Added search engine" />
+    <MESSAGE value="finished search engine" />
+    <MESSAGE value="modified search engine" />
+    <MESSAGE value="Added intention classifier" />
+    <MESSAGE value="Added relevant topics" />
+    <MESSAGE value="Corrected word cloud" />
+    <MESSAGE value="Finished intention classifier" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished intention classifier" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/searchengine/search_engine.py</url>
-          <line>104</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="current_tf[i]" />
+        <watch expression="words_query_tf[i]" />
+        <watch expression="token" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>stop_words</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/clase1/Example1.txt">
@@ -411,16 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/word_cloud/word_cloud.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clase2/tokenize.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -431,30 +512,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/word_cloud/example.py">
+    <entry file="file://$PROJECT_DIR$/clase3/search_engine.py" />
+    <entry file="file://$PROJECT_DIR$/searchengine/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searchengine/search_engine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        <state relative-caret-position="340">
+          <caret line="184" column="13" lean-forward="true" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#343#726#0" />
+            <element signature="e#761#982#0" />
+            <element signature="e#1015#1223#0" />
+            <element signature="e#1274#1439#0" />
+            <element signature="e#1478#1826#0" />
+            <element signature="e#1868#2781#0" />
+            <element signature="e#2838#3362#0" />
+            <element signature="e#3420#3674#0" />
+            <element signature="e#3729#4085#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlu/intent_classifier/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/nlu/intent_classifier/Basic-Classifier-intention.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/session2/Untitled.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/session2/Glove-pretain.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/session2/word2vec example.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/session2/word2vec-pretrain.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/session2/DistributedRepresentationsv2.ipynb" />
+    <entry file="file://$PROJECT_DIR$/nlu/session2/DistributedRepresentationsv1_tf.ipynb" />
+    <entry file="file://$PROJECT_DIR$/word_cloud/word_cloud.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clase3/search_engine.py" />
-    <entry file="file://$PROJECT_DIR$/searchengine/search_engine.py">
+    <entry file="file://$PROJECT_DIR$/word_cloud/example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="136">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#516#899#0" />
-            <element signature="e#934#1155#0" />
-            <element signature="e#1188#1394#0" />
-            <element signature="e#1449#1653#0" />
-            <element signature="e#1704#1869#0" />
-            <element signature="e#1908#2256#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlu/intent_classifier/Classifier-intention.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="9" />
         </state>
       </provider>
     </entry>
